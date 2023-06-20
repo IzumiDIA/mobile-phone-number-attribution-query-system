@@ -77,7 +77,7 @@ public class NumberInfoQueryServiceImpl implements NumberInfoQueryService {
 			} catch (final IOException e) {
 				throw new RuntimeException(e);
 			}
-		});
+		}).whenCompleteAsync((result, e) -> prefixCache.put(telephoneNumber.substring(0, 3), result.data().sp()));
 	}
 	
 	private NumberInfoQueryResult numberInfoMap(@NonNull final HttpResponse<InputStream> response) throws IOException {

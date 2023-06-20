@@ -48,7 +48,7 @@ public class QueryNumberInfoController {
 		}
 	}
 	
-	@GetMapping(value = "detailNumberInfo", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/detailNumberInfo", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseEntity<NumberInfoQueryResult> queryDetailNumberInfo(@RequestParam("telNum") @LegitimateNumber final String telephoneNumber) throws ExecutionException, InterruptedException {
 		return ResponseEntity.ok()

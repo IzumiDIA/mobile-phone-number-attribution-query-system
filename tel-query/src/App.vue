@@ -9,11 +9,11 @@ const input = ref('')
 		      oninput="queryNumberInfo(this);" id="query-form">
 			<el-container>
 				<el-header>
-					所属运营商：<output class="result" for="phoneNumber" name="operatorName"></output>
+					📶所属运营商：<output class="result" for="phoneNumber" name="operatorName"></output>
 				</el-header>
 				<el-main>
 					<label>
-						<input type="tel" maxlength="13" name="phoneNumber" id="phoneNumber" value="138">
+						☎️<input type="tel" maxlength="13" name="phoneNumber" id="phoneNumber" value="138" autocomplete="off">
 					</label>
 				</el-main>
 				<el-footer class="footer">
@@ -69,7 +69,7 @@ output.result[name="city"]:not(:empty)::after {
 #phoneNumber {
 	font-size: 1.5em;
 	font-weight: bolder;
-	max-width: 10em;
+	max-width: 9em;
 	text-align: center;
 	padding-inline: .5em;
 	border-radius: .6em;
